@@ -1,20 +1,36 @@
-# Site settings
-title: A blog about lorem ipsum dolor sit amet
-description: A blog about lorem ipsum dolor sit amet
-# baseurl: "/particle" # the subpath of your site, e.g. /blog
-# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+# -----------------------
+# 사이트 기본 설정
+# -----------------------
+title: "Myeonggu's Portfolio"
+description: "M.S., Student, IAI Lab, Kyung Hee University
+Research Interests - AI-Driven Intelligent Manufacturing & Process
+Research focus - ML / DL, Time-Series Forecasting, GNN & RL, LLM (RAG/FT)"
 
-# User settings
-username: Anon Developer
-user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
-user_title: Software Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
+# 중요: 저장소 이름을 '아이디.github.io'로 했다면 baseurl은 비워둡니다.
+baseurl: ""
+url: "https://myoo-oong.github.io"
 
-# Google-analytics
-google-analytics:
-  id: ""
+# -----------------------
+# 사용자 정보 (서핏 내용 반영)
+# -----------------------
+username: "Myeonggu Kang"
+user_description: "M.S., Student, IAI Lab, Kyung Hee University
+Research Interests - AI-Driven Intelligent Manufacturing & Process
+Research focus - ML / DL, Time-Series Forecasting, GNN & RL, LLM (RAG/FT)"
+user_title: "[서핏의 '직군/직무' 예: Frontend Developer]"
+email: "[이메일 주소]"
 
-exclude: ['package.json', 'src' , 'node_modules']
+# -----------------------
+# 소셜 링크 (필요한 것만 남기고 삭제하세요)
+# -----------------------
+twitter_username: 
+github_username: "myoo-oong"
+# surfit_url: "https://my.surfit.io/w/96071231" # 필요하면 주석(#)을 풀고 쓰세요
+
+# -----------------------
+# 테마 설정 (건드리지 마세요)
+# -----------------------
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+gems: [jekyll-paginate, jekyll-gist]
