@@ -1,3 +1,438 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myeonggu Kang | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-text: #666;
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+
+        .header-content h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--light-text);
+            margin: 0 0 20px 0;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Avatar Placeholder */
+        .avatar-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Sections */
+        section {
+            background: var(--card-bg);
+            padding: 30px 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        h3.section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        /* List Styles */
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Items (Projects, Education) */
+        .item {
+            margin-bottom: 30px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .item-date {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .item-subtitle {
+            font-size: 0.95rem;
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .tags {
+            margin-top: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef2f7;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .link-btn {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .header-content {
+                margin-top: 20px;
+            }
+            .item-header {
+                flex-direction: column;
+            }
+            .item-date {
+                margin-left: 0;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="header-content">
+                <h1>Myeonggu Kang</h1>
+                <h2>Master Student, Industrial Artificial Intelligence Laboratory</h2>
+                <p>
+                    <strong>Kyung Hee University</strong><br>
+                    Research Interests: AI-Driven Intelligent Manufacturing & Process Intelligence.<br>
+                    Focus: ML/DL, Time-Series Forecasting, GNN & RL, LLM (RAG/FT).
+                </p>
+                <div class="social-links">
+                    <a href="mailto:augrb@khu.ac.kr" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://huggingface.co/myoo-oong" target="_blank" title="HuggingFace"><i class="fas fa-robot"></i></a>
+                    <a href="https://www.instagram.com/myoo_oong/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="avatar-placeholder">MK</div>
+        </header>
+
+        <section>
+            <h3 class="section-title">Education</h3>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">M.S. in Artificial Intelligence</span>
+                    <span class="item-date">2025.09 - Present</span>
+                </div>
+                <span class="item-subtitle">Kyung Hee University</span>
+                <ul>
+                    <li>Research Assistant, Industrial Artificial Intelligence (IAI) Lab (2024.01 - 2025.08)</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">B.S. in Industrial and Management Systems Engineering (Double Major)</span>
+                    <span class="item-date">Graduating 2025.08</span>
+                </div>
+                <span class="item-subtitle">Kyung Hee University</span>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">B.S. in Software Convergence</span>
+                    <span class="item-date">Graduating 2025.08</span>
+                </div>
+                <span class="item-subtitle">Kyung Hee University</span>
+                <ul>
+                    <li>Academic Excellence Award (Top Student), College of Engineering (2024 - Senior Year)</li>
+                    <li>Academic Excellence Award (Top Student), College of Engineering (2023 - Sophomore Year)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Projects</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Manufacturing-Specialized SLM for Integrated Equipment & Process Monitoring</span>
+                    <span class="item-date">2025.03 - Present</span>
+                </div>
+                <ul>
+                    <li>Collaborative R&D project with an industrial automation company.</li>
+                    <li>Developing a domain-specific Small Language Model (SLM) system for intelligent factory monitoring.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">SLM</span>
+                    <span class="tag">Industrial AI</span>
+                    <span class="tag">Process Monitoring</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Korean Sarcasm Detection Model & Corpus Construction</span>
+                    <span class="item-date">2025.03 - 2025.07</span>
+                </div>
+                <span class="item-subtitle">Team Leader | Poster at HCLT-KACL 2025</span>
+                <ul>
+                    <li>Built a Korean sarcasm classification system combining rule-based filtering and LLMs.</li>
+                    <li>Collected and refined datasets from social media and online communities.</li>
+                    <li>Used LangChain for prompt engineering to generate structured sarcastic dialogues.</li>
+                    <li>Fine-tuned and evaluated KoBERT and BLOSSOM-3B models.</li>
+                </ul>
+                <a href="https://github.com/myoo-oong/Sarcasm" target="_blank" class="link-btn"><i class="fab fa-github"></i> View on GitHub</a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Multi-step Wind Power Generation Prediction Using TimesFM</span>
+                    <span class="item-date">2024.09 - 2025.06</span>
+                </div>
+                <span class="item-subtitle">Independent Researcher | Poster at KCC 2025</span>
+                <ul>
+                    <li>Leveraged Google's TimesFM (Foundation Model) for renewable energy forecasting.</li>
+                    <li>Integrated 4 years of wind turbine data and weather forecasts from Jeju Island.</li>
+                    <li>Implemented multi-step forecasting (24 hours ahead) using historical data and exogenous features.</li>
+                    <li>Achieved R² up to 0.57, outperforming LSTM baselines.</li>
+                </ul>
+                <a href="https://www.kiise.or.kr/conference02/data/kcc2024/PB.pdf" target="_blank" class="link-btn"><i class="fas fa-file-pdf"></i> View Paper</a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Maritime Object Detection on Ships Using YOLO</span>
+                    <span class="item-date">2024.09 - 2024.12</span>
+                </div>
+                <ul>
+                    <li>Conducted object detection research using maritime images captured on ships.</li>
+                    <li>Contributed to model tuning and detection performance improvement using YOLOv8.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Sleep Stage Classification & Image Generation with Multimodal Biosignals</span>
+                    <span class="item-date">2024.03 - 2024.09</span>
+                </div>
+                <span class="item-subtitle">Team Leader | Poster at KSC 2024 (Encouragement Prize)</span>
+                <ul>
+                    <li>Developed a CNN+LSTM model for sleep stage classification using EEG, EOG, EMG, and ECG signals.</li>
+                    <li>Implemented full-stack pipeline: Signal preprocessing (Wavelet denoising) to Model training.</li>
+                    <li>Created a "Dream Visualization" system using Stable Diffusion (SDXL-Turbo) based on REM-stage features.</li>
+                </ul>
+                <a href="https://www.kiise.or.kr/conference02/data/ksc2024/PB.pdf" target="_blank" class="link-btn"><i class="fas fa-file-pdf"></i> View Paper</a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Wind Power Forecasting System Using Time-series DB</span>
+                    <span class="item-date">2024.03 - 2024.09</span>
+                </div>
+                <span class="item-subtitle">Presented at Korea Smart Media Association Autumn Conference 2024</span>
+                <ul>
+                    <li>Designed an end-to-end architecture using Machbase-NEO (TSDB) for efficient data handling.</li>
+                    <li>Implemented LSTM models with walk-forward validation.</li>
+                    <li>Demonstrated significant reduction in system overhead compared to offline processing.</li>
+                </ul>
+                <a href="http://www.calsec.or.kr/databank/proceeding/calsec2024_fc_paper.html" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> View Proceeding</a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Object Detection on 2D Road Scene Images</span>
+                    <span class="item-date">2023.09 - 2023.12</span>
+                </div>
+                <span class="item-subtitle">Team Leader | Collaboration with Gyeonggi Autonomous Driving Center</span>
+                <ul>
+                    <li>Trained YOLOv5m-based model for pedestrians, vehicles, and cyclists detection.</li>
+                    <li>Managed labeling analysis, preprocessing, and hyperparameter tuning.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Selected Publications & Presentations</h3>
+            
+            <div class="item">
+                <strong>A Data Corpus Generation Pipeline for Advancing Korean Sarcasm Detection</strong><br>
+                Poster Session at HCLT-KACL 2025 (Daejeon, Korea) | <em>2025.10</em>
+            </div>
+            
+            <div class="item">
+                <strong>Multi-step Wind Power Generation Prediction Using a Time-series Foundation AI Model</strong><br>
+                Poster Session at KCC 2025 (Korea Computer Congress, Jeju Island) | <em>2025.07</em>
+            </div>
+
+            <div class="item">
+                <strong>Deep Learning-Based Sleep Stage Classification Using Multimodal Biosignals</strong><br>
+                Poster at KSC 2024 (Korea Software Congress, Yeosu) - <strong>Encouragement Prize</strong> | <em>2024.12</em>
+            </div>
+
+            <div class="item">
+                <strong>Development of Machine Learning-based Wind Power Forecasting Systems Using Time-series DB</strong><br>
+                Oral Presentation at 2024 Autumn Conf. of Korea Smart Media Association (Seoul) | <em>2024.10</em>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Activities & Global Experience</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Research Assistant, IAI Lab</span>
+                    <span class="item-date">2023.12 - 2025.08</span>
+                </div>
+                <ul>
+                    <li><strong>GNN Study:</strong> Covered GCN, GAT applications in manufacturing fault diagnosis.</li>
+                    <li><strong>LLM & RAG:</strong> Explored Retrieval-Augmented Generation pipelines and fine-tuning.</li>
+                    <li><strong>LangChain:</strong> Study group on LLM orchestration and tool integration.</li>
+                    <li><strong>XAI:</strong> Studied SHAP, LIME, and model-agnostic interpretability.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Kyung Hee University Data Analytics Club (KHUDA)</span>
+                    <span class="item-date">2024.02 - 2024.12</span>
+                </div>
+                <ul>
+                    <li><strong>Awards:</strong> Best Study Group Prize (ADsP certification group).</li>
+                    <li><strong>RL Track:</strong> Led hands-on projects including Unity ML-Agents simulations.</li>
+                    <li><strong>Events:</strong> Organized intercollegiate Datathon; Attended Gyeonggi Great Global Transformation Forum.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">University of Auckland (New Zealand) - ELA Program</span>
+                    <span class="item-date">2025.02</span>
+                </div>
+                <span class="item-subtitle">Kyung Hee University Major Study Abroad Program</span>
+                <ul>
+                    <li>Completed intensive English training and Project/Risk Management studies.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Certifications & Skills</h3>
+            <div class="item">
+                <strong>Certifications:</strong> ADsP (Advanced Data Analytics Semi-Professional) - KData (2024)<br>
+                <strong>Core Expertise:</strong> AI (Machine Learning, Deep Learning, LLM)<br>
+                <strong>Research Focus:</strong> Time-Series Forecasting, GNN, Reinforcement Learning, RAG/Fine-Tuning
+            </div>
+        </section>
+        
+        <footer style="text-align: center; color: #999; font-size: 0.8rem; margin-top: 50px;">
+            &copy; 2025 Myeonggu Kang. All rights reserved.
+        </footer>
+
+    </div>
+
+</body>
+</html>
